@@ -1,13 +1,13 @@
 {
   "name": "atom-weex-devtool",
   "main": "./lib/atom-weex-devtool",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A short description of your package",
   "keywords": [],
   "activationCommands": {
     "atom-workspace": "atom-weex-devtool:toggle"
   },
-  "repository": "https://github.com/atom/atom-weex-devtool",
+  "repository": "https://github.com/JackPu/atom-weex-devtool",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
