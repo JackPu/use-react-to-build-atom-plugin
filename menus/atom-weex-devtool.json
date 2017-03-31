@@ -4,6 +4,10 @@
       {
         "label": "Toggle atom-weex-devtool",
         "command": "atom-weex-devtool:toggle"
+      },
+      {
+        "label": "Fetch atom-weex-devtool",
+        "command": "atom-weex-devtool:fetch"
       }
     ]
   },
@@ -17,6 +21,10 @@
             {
               "label": "Toggle",
               "command": "atom-weex-devtool:toggle"
+            },
+            {
+              "label": "Fetch code",
+              "command": "atom-weex-devtool:fetch"
             }
           ]
         }
