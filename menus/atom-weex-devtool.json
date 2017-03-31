@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle atom-weex-devtool",
+        "command": "atom-weex-devtool:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "atom-weex-devtool",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "atom-weex-devtool:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
