@@ -1,18 +1,26 @@
 {
-  "name": "atom-weex-devtool",
-  "main": "./lib/atom-weex-devtool",
-  "version": "0.0.1",
+  "name": "atom-plugin-test",
+  "main": "./lib/atom-plugin-test",
+  "version": "0.0.0",
   "description": "A short description of your package",
   "keywords": [],
-  "activationCommands": {
-    "atom-workspace": "atom-weex-devtool:toggle"
-  },
-  "repository": "https://github.com/JackPu/atom-weex-devtool",
+  "repository": "https://github.com/atom/atom-plugin-test",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "request": "^2.81.0"
+    "classnames": "^2.2.5",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "redux": "^3.6.0",
+    "rxjs": "^5.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3"
   }
 }

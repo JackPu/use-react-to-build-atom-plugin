@@ -1,44 +1,44 @@
 'use babel';
 
-import AtomWeexDevtool from '../lib/atom-weex-devtool';
+import AtomPluginTest from '../lib/atom-plugin-test';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
-describe('AtomWeexDevtool', () => {
+describe('AtomPluginTest', () => {
   let workspaceElement, activationPromise;
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('atom-weex-devtool');
+    activationPromise = atom.packages.activatePackage('atom-plugin-test');
   });
 
-  describe('when the atom-weex-devtool:toggle event is triggered', () => {
+  describe('when the atom-plugin-test:toggle event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.atom-weex-devtool')).not.toExist();
+      expect(workspaceElement.querySelector('.atom-plugin-test')).not.toExist();
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'atom-weex-devtool:toggle');
+      atom.commands.dispatch(workspaceElement, 'atom-plugin-test:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
       });
 
       runs(() => {
-        expect(workspaceElement.querySelector('.atom-weex-devtool')).toExist();
+        expect(workspaceElement.querySelector('.atom-plugin-test')).toExist();
 
-        let atomWeexDevtoolElement = workspaceElement.querySelector('.atom-weex-devtool');
-        expect(atomWeexDevtoolElement).toExist();
+        let atomPluginTestElement = workspaceElement.querySelector('.atom-plugin-test');
+        expect(atomPluginTestElement).toExist();
 
-        let atomWeexDevtoolPanel = atom.workspace.panelForItem(atomWeexDevtoolElement);
-        expect(atomWeexDevtoolPanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'atom-weex-devtool:toggle');
-        expect(atomWeexDevtoolPanel.isVisible()).toBe(false);
+        let atomPluginTestPanel = atom.workspace.panelForItem(atomPluginTestElement);
+        expect(atomPluginTestPanel.isVisible()).toBe(true);
+        atom.commands.dispatch(workspaceElement, 'atom-plugin-test:toggle');
+        expect(atomPluginTestPanel.isVisible()).toBe(false);
       });
     });
 
@@ -51,11 +51,11 @@ describe('AtomWeexDevtool', () => {
       // workspaceElement to the DOM are generally slower than those off DOM.
       jasmine.attachToDOM(workspaceElement);
 
-      expect(workspaceElement.querySelector('.atom-weex-devtool')).not.toExist();
+      expect(workspaceElement.querySelector('.atom-plugin-test')).not.toExist();
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'atom-weex-devtool:toggle');
+      atom.commands.dispatch(workspaceElement, 'atom-plugin-test:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -63,10 +63,10 @@ describe('AtomWeexDevtool', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let atomWeexDevtoolElement = workspaceElement.querySelector('.atom-weex-devtool');
-        expect(atomWeexDevtoolElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'atom-weex-devtool:toggle');
-        expect(atomWeexDevtoolElement).not.toBeVisible();
+        let atomPluginTestElement = workspaceElement.querySelector('.atom-plugin-test');
+        expect(atomPluginTestElement).toBeVisible();
+        atom.commands.dispatch(workspaceElement, 'atom-plugin-test:toggle');
+        expect(atomPluginTestElement).not.toBeVisible();
       });
     });
   });

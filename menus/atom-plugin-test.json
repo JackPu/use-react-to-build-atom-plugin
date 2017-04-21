@@ -1,0 +1,30 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle atom-plugin-test",
+        "command": "atom-plugin-test:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "atom-plugin-test",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "atom-plugin-test:toggle"
+            },
+            {
+              "label": "Repeat",
+              "command": "atom-plugin-test:repeat"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
