@@ -4,14 +4,14 @@
 
 Atom 是目前非常流行的编辑器，除了好用小巧的特点，它丰富的插件也给开发者提供了很多的便利性。
 
-Atom 是基于 [Electron](https://electron.atom.io/) 进行开始，也就是说我们可以通过写 HTML + CSS + JavaScript 的方式来构建我们的桌面应用。而一个典型的Electron App 的架构如图:
+Atom 是基于 [Electron](https://electron.atom.io/) 开发的，也就是说我们可以通过写 HTML + CSS + JavaScript 的方式来构建我们的桌面应用。而一个典型的Electron App 的架构如图:
 <img src="https://gtms04.alicdn.com/tfs/TB1stZiQFXXXXXEXVXXXXXXXXXX-1650-1275.png" />
 
-其实我们在完成实际的插件的部分，我们做的工作就是最上层，使用我们前端最基本的知识去实现基本的需求。当然这一层的实现，可以有很多方式，你可以使用简单的JS 去创建视图窗口，你也可以使用一些框架，比如 Vue.js 以及今天提及的 [React](https://facebook.github.io/react/)。React 最核心的一个目标:
+其实我们在完成实际的插件的部分，也就是工作的最上层，使用我们前端最基本的知识去实现基本的需求。当然这一层的实现，可以有很多方式，你可以使用简单的JS 去创建视图窗口，你也可以使用一些框架，比如 Vue.js 以及今天提及的 [React](https://facebook.github.io/react/)。React 最核心的一个目标:
 > A JAVASCRIPT LIBRARY FOR BUILDING USER INTERFACES
 
-React 的发展很迅速，现在不仅可以完成普通网站的开发，也能能够开发原生的App([React-Native](http://facebook.github.io/react-native/))，也可以开发 VR 相关的内容 ([React-VR](https://facebook.github.io/react-vr/)), 当然桌面应用现在也是可以完成的借助于 Electron 。
-
+React 的发展很迅速，现在不仅可以完成普通网站的开发，也能能够开发原生的App([React-Native](http://facebook.github.io/react-native/))，也可以开发 VR 相关的内容 ([React-VR](https://facebook.github.io/react-vr/)), 当然桌面应用现在也是可以借助于 Electron 完成。
+今天我们简单实现一个插件，通过菜单按钮，呼出对话框，然后完成输入字符串，并将字符串插入到我们的当前代码中。
 
 ### 创建项目
 
