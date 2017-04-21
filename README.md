@@ -241,8 +241,6 @@ class Dialog extends React.Component {
 
 }
 
-
-
 Dialog.defaultProps = {
   onConfirm: function() {},
   onClose: function() {},
@@ -326,6 +324,7 @@ _closeDialog() {
 }
 
 ```
+[完整的代码](https://github.com/JackPu/use-react-to-build-atom-plugin/blob/master/lib/atom-plugin-test.js)
 
 完成基本的逻辑后，我们在 menus 下的菜单添加一个新的菜单选项:
 
@@ -341,17 +340,11 @@ _closeDialog() {
   }
 ]
 ```
+这个时候我们刷新下，就可以看见菜单栏上多出的菜单选项。演示效果如下:
 
+<img src="http://img1.vued.vanthink.cn/vuedad5c4c04846264e883c315d27a266456.gif" />
 
-
-
-
-
-
-
-
-
-
+[完整参考代码](https://github.com/JackPu/use-react-to-build-atom-plugin)
 
 
 ### 参考
@@ -359,6 +352,10 @@ _closeDialog() {
 + [Building your first Atom plugin](https://github.com/blog/2231-building-your-first-atom-plugin)
 
 + [Atom 插件开发知识整理](http://www.jackpu.com/atom-cha-jian-kai-fa-zhi-shi-zheng-li-chi-xu-geng-xin/)
+
++ [TextEditor API](https://atom.io/docs/api/v1.16.0/TextEditor#instance-onDidRemoveCursor)
+
++ [Nuclide]
 
 
 
